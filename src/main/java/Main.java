@@ -1,5 +1,5 @@
 //Нужно прибавить к числу единицу и вернуть результирующую строку. Пользоваться методами преобразования строки в число нельзя
-//I transform from characters to integers. This is allowed
+//This class can increase any number by 1 if it is collected in a String and tells you if you are trying to increase a non-figure character
 
 import java.util.ArrayList;
 
