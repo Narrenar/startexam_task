@@ -1,27 +1,27 @@
 // Emulates a service that provides some data
 
 public class StartExam {
-    private String strLong = "999999999999999999";
-    private String setReturnedStrLong = strLong;
+    private String numberAsString = "99999999999999999999999999999999999999999999999999999999999999999999999999999999" +
+            "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
+    private String returnedNumberAsString = "";
 
-    // Give strLong data to our program
-    public String getStrInteger() {
-        return strLong;
+    // Give numberAsString data to our program
+    public String getNumberAsString() {
+        return numberAsString;
     }
 
-    // Let us to give the changed strInteger data back safely without changing the initial code of the service
-    public void setReturnedStrLong(String returnedStrLong) {
-        this.setReturnedStrLong = returnedStrLong;
+    // Let us give the changed numberAsString data back safely without changing the initial numberAsString of the service
+    public void setNumberAsString(String returnedNumberAsString) {
+        this.returnedNumberAsString = returnedNumberAsString;
     }
 
-    // Service applies our strLong change to it's own strInteger if it is valid for the service
-    private void applyReturnedStrLong() {
-        strLong = setReturnedStrLong;
-    }
+    // Service applies our returnedNumberAsString to it's own numberAsString if it is valid for the service:
+    /*private void applySetReturnedNumberAsString() {
+        numberAsString = returnedNumberAsString;
+    }*/
 
-    // checks the task of StartExam. It should be strLong + 1
-    // returns result of strLong like if applyReturnedStrLong() is used
-    public String getReturnedStrInteger() {
-        return setReturnedStrLong;
+    // checks the task of StartExam. It should be numberAsString + 1 or throw an error
+    public String getReturnedNumberAsString() {
+        return returnedNumberAsString;
     }
 }
